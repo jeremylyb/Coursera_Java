@@ -1,0 +1,11 @@
+'''Write a function named numberPixels that calculates the total number of pixels in an image. The function numberPixels has one parameter named namefile, which is a string that is the name of an image file. This function calculates and returns the total number of pixels in the specified image filename. For example, the call numberPixels("chapel.png") returns 71148, and the call numberPixels("dinos.png") returns 2073600. Both of these are images on the dukelearntoprogram.com website. For each image on that website it also displays the size of that image. That website shows that chapel.png has 231 pixels in width and 308 pixels in height, and 231*308 is 71148 total pixels. That website also shows that dinos.png has 1920 pixels in with and 1080 pixels in height, and 1920*1080 is 2073600 total pixel. The function has been started below for you. Note that you first need to create a SimpleImage from the filename. Then you can apply SimpleImage methods to the variable someImg such as getHeight() to get the number of pixels in the height of the image.
+'''
+
+function numberPixels(namefile) {
+    var someImg = new SimpleImage(namefile);
+    var height = someImg.getheight();
+    var width = someImg.getwidth();
+    return height*width
+var result = numberPixels('dinos.pg')
+print(result)
+}

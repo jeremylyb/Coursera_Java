@@ -1,0 +1,13 @@
+'''Write a function named printPixel that prints the red, blue and green values of a pixel, in that order, one on each line, and identifies each one.  The function printPixel has three parameters,  namefile, which is a string that is the name of an image file, and xpos and ypos that are numbers representing the x and y coordinates of the pixel location. Consider using the SimpleImage methods getRed, getGreen, and getBlue. Since this function is printing values, it does not need a return statement. Note that in the image drewgreen.png, Drew is standing in the middle and the background is bright green. So the first pixel printed at x and y location (10,10) is near the edge and is bright green. For its red, green and blue values, it has all green (255), no blue (0)  and only a tiny bit of red (1). The second pixel printed is in the middle of the image and is some part of Drew.
+'''
+function printPixel(namefile, xpos, ypos) {
+    var someImg = new SimpleImage(namefile);
+    var greenVal = someImg.getGreen(xpos,ypos);
+    var redVal = someImg.getRed(xpos,ypos);
+    var blueVal = someImg.getBlue(xpos,ypos);
+    print('red is '+redVal);
+    print('green is '+greenVal);
+    print('blue is '+blueVal);
+}
+
+printPixel("drewgreen.png",10, 10);
