@@ -1,0 +1,10 @@
+'''Write a function named perimeter that calculates the number of pixels in the perimeter of an image. The perimeter is the number of pixels on the edge of the image, from all four sides. The function perimeter has one parameter named imageName, which is a string that is the name of an image file. This function calculates and returns the perimeter in the specified image filename. For example, the image "rodger.png" has 315 pixels in width and 424 pixels in height. That means it has 315 pixels on the bottom, 315 on the top, 424 on the right side and 424 on the left side. The perimeter of this image is 315 + 315 + 424 + 424 =  1478. The call perimeter("rodger.png") returns 1478.
+'''
+
+function perimeter(imageName){
+    var someImg = new SimpleImage(imageName);
+    var height = someImg.getHeight();
+    var width = someImg.getWidth();
+    return (height*2 + width*2);
+}
+print(perimeter('rodger.png'))
